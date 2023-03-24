@@ -1,0 +1,6 @@
+TODO: get rid of scrolling function - I don't need it in this application
+
+
+
+Done
+TODO: change set velocity function for Log class so that it will only take one parameter
