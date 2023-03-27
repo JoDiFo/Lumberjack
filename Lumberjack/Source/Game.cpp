@@ -4,7 +4,6 @@
 Game::Game()
 	: mName("Lumberjack")
 	, mWindow(sf::VideoMode(640, 360), mName, sf::Style::Close)
-	, mWorld(mWindow)
 {
 }
 
@@ -16,13 +15,9 @@ Game::~Game()
 // Handles all events
 void Game::processEvents()
 {
-	CommandQueue& commands = mWorld.getCommandQueue();
-
 	sf::Event event;
 	while (mWindow.pollEvent(event))
 	{
-		mPlayer.handleEvent(event, commands);
-
 		switch (event.type)
 		{
 		case sf::Event::Closed:
@@ -35,14 +30,14 @@ void Game::processEvents()
 // Updating the state of the game
 void Game::update(sf::Time deltaTime)
 {
-	mWorld.update(deltaTime);
+	//	Update all objects
 }
 
 // Render objects
 void Game::render()
 {
 	mWindow.clear();
-	mWorld.draw();
+	// Draw objects
 	mWindow.display();
 }
 

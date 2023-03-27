@@ -1,8 +1,5 @@
 #pragma once
 
-#include "World.hpp"
-#include "Player.hpp"
-
 #include "SFML/Graphics.hpp"
 
 class Game
@@ -10,8 +7,6 @@ class Game
 private:
 	const std::string	mName;
 	sf::RenderWindow	mWindow;
-	World				mWorld;
-	Player				mPlayer;
 
 public:
 	Game();
